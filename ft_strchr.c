@@ -6,27 +6,27 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:11:44 by aelbour           #+#    #+#             */
-/*   Updated: 2024/10/25 16:20:50 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/09 18:08:34 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(char *s){
-
-	size_t i;
-
-	i = 0;
-	while(s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c){
     size_t i;
+    size_t j;
 
-    i = ft_strlen((char *) s);
-    while(i >= 0)
-        if (s[i--] == c)
-            return ((char *) &s[i]);
+    j = ft_strlen((char *) s);
+    i = 0;
+    while(i <= j)
+        if (s[i++] == (char)c)
+            return ((char *) &s[--i]);
     return (NULL);
-    
 }
+
+// int main(void)
+// {
+//     const char c[] = "hellow world";
+//     printf("my func |%p| \n", ft_strchr(c, 'w'));
+//     printf("C func  |%p| \n", strchr(c, 'w'));
+// }

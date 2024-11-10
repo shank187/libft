@@ -6,9 +6,11 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:09:57 by aelbour           #+#    #+#             */
-/*   Updated: 2024/10/24 22:09:59 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/09 17:28:16 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_isdigit(unsigned char c){
     if(c >= 48 && c <= 57)

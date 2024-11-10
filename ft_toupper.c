@@ -6,9 +6,11 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:58:23 by aelbour           #+#    #+#             */
-/*   Updated: 2024/10/25 16:03:29 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/09 17:29:04 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int ft_toupper(unsigned char c){
     if(c >= 'a' && c <= 'z')
