@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 12:27:35 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/10 21:46:35 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/12 17:56:43 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,61 +17,57 @@ int is_valid(const char c, const char *s){
 	i = 0;
 	while(s[i])
 	{
-		if (c ==  s[i])
+		if (c == s[i])
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-size_t get_trimed_len(char const *s1, char const *set, const char *start)
+size_t get_trimed_len(char const *s1, char const *set, size_t *start)
 {
-	size_t len;
-	size_t i;
-	
-	len = ft_strlen(s1);
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen((char *)s1);
 	i = len - 1;
-	while(i > 0 && !is_valid(s1[i] ,set)){
+	while	(i > 0 && !is_valid(s1[i] ,set))
+	{
 		len--;
 		i--;
 	}
 	if (!i)
-		return(0)
+		return (0);
 	i = 0;
 	while(s1[i] && !is_valid(s1[i] ,set)){
 		i++;
 		len--;
 	}
-	start = &s1[i]
-	return(len)
+	*(start) = i;
+	return(len);
 }
 
-void ft_trim(char const *s1, char const *set, char *dst){
-}
 
 char *ft_strtrim(char const *s1, char const *set){
-	char *s;
-	size_t len;
-	size_t start;
+	size_t	len;
+	size_t	t_len;
+	size_t	start;
 
-	s = NULL;
-	len = ft_strlen((char *) s1);
 	if (!s1)
 		return (NULL);
-	if(!set || !ft_strlen((char *) set))
+	else if(!set)
 		return (ft_strdup(s1));
-	else if (get_trimed_len(s1, set) == len)
+	len = ft_strlen((char *)s1);
+	t_len = get_trimed_len(s1, set, &start);
+	if(!ft_strlen((char *) set) || len == t_len)
 		return (ft_strdup(s1));
-	else if(! get_trimed_len(s1, set))
-		return(ft_strdup(""));
-	else{
-		s = ft_substr();
+	else
+		return(ft_substr(s1, start, t_len));
 
-	}
-	printf("the size secured is %lu\n",get_trimed_len(s1, set) + 1);
-	return (s);
 }
 
 // int main(void){
-// 	printf("the trimed str |%s|",ft_strtrim("hello world", "ppppkkkksa a7263"));
+// 	char *s = ft_strtrim("hello worldddddd", "d shhsj");
+// 	printf("the trimed str |%s|",s);
+// 	free(s);
 // }

@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 21:09:53 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/10 11:51:08 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/12 16:58:57 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ char *ft_substr(char const *s, unsigned int start, size_t len){
 	if (start > s_len)
 		return (NULL);
 	s_len = ft_strlen((char *) &s[start]);
-	size = len;
+	size = len + 1;
 	if (s_len < len)
-		size = s_len;
-	c = (char *) malloc(size + 1);
-	printf("the size secured is %lu\n",size + 1);
+		size = s_len + 1;
+	c = (char *) malloc(size);
+	// printf("the size secured in | FT_SUBSTR | is %lu\n", size);
 	if (!c)
 		return (NULL);
-	ft_strlcpy(c, &s[start], size + 1);
+	ft_strlcpy(c, &s[start], size);
 	return (c);
 }
 
-int main(void){
-	printf("|%s|\n",ft_substr("hello",0,20));
-}
+// int main(void){
+// 	printf("|%s|\n",ft_substr("hello",0,20));
+// }
