@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 12:21:14 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/13 20:17:15 by aelbour          ###   ########.fr       */
+/*   Created: 2024/11/13 15:34:04 by aelbour           #+#    #+#             */
+/*   Updated: 2024/11/13 16:40:44 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n){
-    size_t i;
-    unsigned char *p;
-
-    p = (unsigned char *) s;
-    i = 0;
-
-    while(i < n)
-        p[i++] = 0;
+void ft_putchar_fd(char c, int fd){
+    write(fd, &c, 1);
 }
+// int main(void){
+//     ft_putchar_fd('a',-1);
+// }

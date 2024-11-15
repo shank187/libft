@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:58:41 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/09 18:00:28 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/13 18:15:30 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int ft_memcmp(const void *s1, const void *s2, size_t n){
 	return(0);
 }
 
-// int main(void)
-// {
-//     const char c[] = "hello world";
-//     const char c2[] = "hello world";
+int main(void)
+{
+    const char c[] = "hello world";
+    const char c2[] = "hello world";
 	
-//     printf("my func |%i| \n", ft_memcmp(c, c2, 11));
-//     printf("C func  |%i| \n", memcmp(c, c2, 11));
-// }
+    // printf("my func |%i| \n", ft_memcmp(NULL, c2, 11));
+    // printf("C func  |%i| \n", memcmp(NULL, c2, 11));
+}

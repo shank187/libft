@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:46:26 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/12 17:02:08 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/13 21:08:25 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,23 @@ size_t	count_cols(char const *s, char c){
 		t++;
 	return(t);
 }
+ 
+int check_crash(char **arr, size_t i){
+	
+	if(!arr[i]){
+		i--;
+		while(i){
+			free(arr[i]);
+			i--;
+		}
+		free(arr[0]);
+		free(arr);
+		return(0);
+	}
+	return(1);
+}
 
-void	ft_store(char **arr, const char *s, char c, size_t cols)
+int	ft_store(char **arr, const char *s, char c, size_t cols)
 {
 	size_t i;
 	size_t j;
@@ -53,6 +68,8 @@ void	ft_store(char **arr, const char *s, char c, size_t cols)
 	while(j < cols){
 		if(s[i] == c){
 			arr[j] = ft_substr(s, l , i - l);
+			if(!check_crash(arr, j))
+				return(0);
 			skip_seps(&i, s, c);
 			l = i;
 			j++;
@@ -60,6 +77,7 @@ void	ft_store(char **arr, const char *s, char c, size_t cols)
 		else
 			i++;
 	}
+	return(1);
 } 
 
 char	**ft_split(char const *s, char c){
@@ -71,7 +89,10 @@ char	**ft_split(char const *s, char c){
 	cols = count_cols(s, c); 
 	arr = (char **)malloc((cols + 1)* sizeof(char *));
 	if(cols)
-		ft_store(arr, s, c, cols);
+		if(ft_store(arr, s, c, cols))
+			return(arr);
+		else
+			return(NULL);
 	return(arr);
 }
 
