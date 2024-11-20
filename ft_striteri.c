@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:44:37 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/13 16:09:31 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/15 17:50:32 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*)){
     if(!s || !f)
         return;
     while(s[i])
-        f(i,&s[i++]);
+    {
+        f(i, &s[i]);
+        i++;
+    }
 }
 

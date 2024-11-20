@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 17:03:45 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/12 18:16:02 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/15 17:35:21 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ char *ft_itoa(int n){
 	return (ft_strdup(s));
 }
 
-int main(void){
-    char *arr;
-    arr = ft_itoa(23838);
-    printf("23838\n%s\n", arr);
-    free(arr);
-}
+// int main(void){
+//     char *arr;
+//     arr = ft_itoa(23838);
+//     printf("23838\n%s\n", arr);
+//     free(arr);
+// }

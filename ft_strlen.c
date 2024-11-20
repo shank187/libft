@@ -6,13 +6,13 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:21:08 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/09 17:28:48 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/20 21:10:53 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *s){
+size_t ft_strlen(const char *s){
 
 	size_t i;
 

@@ -6,13 +6,13 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:07:31 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/09 17:29:01 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/20 18:32:06 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(unsigned char c){
+int ft_tolower(int c){
     if(c >= 'A' && c <= 'Z')
         return (c + ' ');
     return (c);

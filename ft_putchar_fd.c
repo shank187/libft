@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:34:04 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/13 16:40:44 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/16 11:47:32 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,3 @@
 void ft_putchar_fd(char c, int fd){
     write(fd, &c, 1);
 }
-// int main(void){
-//     ft_putchar_fd('a',-1);
-// }

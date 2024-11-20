@@ -6,7 +6,7 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 12:51:33 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/09 16:20:03 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/18 14:56:30 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize){
     size_t i;
     size_t j;
+    
+    if(!dst && !dstsize)
+		return(ft_strlen((char *)src));
     i = ft_strlen(dst);
     if (dstsize < i + 1)
         return(ft_strlen((char *)src) + dstsize);
