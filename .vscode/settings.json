@@ -1,8 +1,5 @@
 {
     "files.associations": {
-        "libft.h": "c",
-        "__locale": "c",
-        "cctype": "c",
-        "locale": "c"
+        "libft.h": "c"
     }
 }

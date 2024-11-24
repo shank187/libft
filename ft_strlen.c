@@ -6,18 +6,18 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:21:08 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/20 21:10:53 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/21 16:51:30 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s){
-
-	size_t i;
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	return (i);
 }

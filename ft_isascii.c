@@ -6,14 +6,15 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 22:10:03 by aelbour           #+#    #+#             */
-/*   Updated: 2024/11/09 17:28:13 by aelbour          ###   ########.fr       */
+/*   Updated: 2024/11/21 15:09:04 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c){
-    if(c >= 0 && c <= 127)
-        return(1);
-    return(0);
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
